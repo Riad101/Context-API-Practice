@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-const Header = () => {
+const Header = (props) => {
+    const category = useContext(CategoryContext);
     return (
         <div>
-            <h3>this is header</h3>
+            <h3>this is header{category}</h3>
+            <button onClick={()=> setCount(category+1)}>Increment</button>
         </div>
     );
 };
